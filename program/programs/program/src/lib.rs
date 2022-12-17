@@ -6,14 +6,22 @@ const TEXT_LENGTH :usize =1024; // the no of character in a post
 const USER_NAME_LENGTH : usize =100; // size of username
 const USER_URL_LENGTH : usize = 255; // length of the profile img url
 
+
 #[program]
 pub mod program {
     use super::*;
-
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
+    // Intialize the function 
+    pub fn create_state(
+        ctx: Context<CreateState>
+    ) -> Result<()> {
+        // Basic function return expected ok
         Ok(())
     }
 }
+
+
+
+// Data structure for the state account and post account
 // Complex account structure
 #[derive(Accounts)]
 pub struct CreateState<'info>{
