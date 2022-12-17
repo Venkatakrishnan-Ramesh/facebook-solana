@@ -14,9 +14,31 @@ pub mod program {
     pub fn create_state(
         ctx: Context<CreateState>
     ) -> Result<()> {
-        // Basic function return expected ok
+        let state = &mut ctx.accounts.state; // a mutatable account to allow one or more users to post
+        state.authority = *ctx.accounts.authority.key(); 
+        state.post_count = 0; // Very first time so no post
         Ok(())
     }
+}
+
+// Create a post
+pub fn create_post(
+    ctx: Context<CreatePost>,
+    text: String,
+    poster_name: String,
+    poster_url: String,
+) -> Result<()> {
+    let post = &mut ctx.accounts.post;
+    let state = &mut ctx.accounts.state;
+    post.authority = *ctx.accounts.authority.key();
+    post.text = text;
+    post.poster_name = poster_name;
+    post.poster_url = poster_url;
+    post.comment_count = 0;
+    post.index = state.post_count;
+    post.post_time = ctx.accounts.clock.unix_timestamp;
+    state.post_count += 1;
+    Ok(())
 }
 
 
