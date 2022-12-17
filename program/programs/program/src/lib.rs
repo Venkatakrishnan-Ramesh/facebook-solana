@@ -18,6 +18,7 @@ pub mod program {
 #[derive(Accounts)]
 pub struct CreateState<'info>{
     #[account(init,
+    
     seeds=[b"state".as_ref()],bump, // making a new random seed unique id
     payer=authority,
     space =size_of::<StateAccount>() +8 // 8 bytes for the bump
@@ -31,7 +32,7 @@ pub struct CreateState<'info>{
     pub system_program: UncheckedAccount<'info>, // Unchecked Account stands for Lesser security 
 
     // adding the constraint that the account 
-    #[account(constraint = token_program,key=&token::key)]
+    #[account(constraint = token_program,key=&token::ID)]
     pub token_program:Program<'info,Token>,// Token program
 
 }
@@ -45,7 +46,7 @@ pub struct StateAccount{
 
 #[derive(Accounts)] 
     pub struct CreatePost<'info>{
-
+        // Post will be used as a seed to create a unique key
     #[account(mut,seeds=[b"state".as_ref()],bump)]    
     pub state : Account<'info,StateAccount>, // letting the Account know that it is a state account
 
@@ -60,6 +61,14 @@ pub struct StateAccount{
 
     )]
     pub post:Account<'info,PostAccount>,
+
+    #[account(mut)] // mutability
+    pub authority: Signer<'info>, // who is the person who posted them
+    pub system_program: UncheckedAccount<'info>, // Unchecked Account stands for Lesser security
+    #[account(constraint = token_program,key=&token::ID)]
+    pub token_program:Program<'info,Token>,// Token program
+    
+    pub clock: Sysvar<'info,Clock>, // System variable to get the time of the post
 }
 
 
