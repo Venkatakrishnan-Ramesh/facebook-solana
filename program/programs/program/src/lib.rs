@@ -12,7 +12,25 @@ pub mod program {
 }
 
 #[derive(Accounts)]
-pub struct Initialize {}
+pub struct CreateState<'info>{
+    #[account(init,
+    seeds=[b"state".as_ref()],bump, // making a new random seed unique id
+    payer=authority,
+    space =size_of::<StateAccount>() +8 // 8 bytes for the bump
+    )]
+
+    // Authority is the person who is creating the account
+    #[account(mut)] // mutability
+    pub authority: Signer<'info>, // who is the person who posted them
+
+    // System program is the program that is going to create the account
+    pub system_program: UncheckedAccount<'info>, // Unchecked Account stands for Lesser security 
+
+    // Token program
+
+    pub token_program:Program<
+
+}
 
 // Post account Structure 
 //  Simple struct so defined  directly 
