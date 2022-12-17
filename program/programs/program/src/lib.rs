@@ -10,7 +10,7 @@ pub mod program {
         Ok(())
     }
 }
-
+// Complex account structure
 #[derive(Accounts)]
 pub struct CreateState<'info>{
     #[account(init,
@@ -26,11 +26,26 @@ pub struct CreateState<'info>{
     // System program is the program that is going to create the account
     pub system_program: UncheckedAccount<'info>, // Unchecked Account stands for Lesser security 
 
-    // Token program
-
-    pub token_program:Program<
+    // adding the constraint that the account 
+    #[account(constraint = token_program,key=&token::key)]
+    pub token_program:Program<'info,Token>,// Token program
 
 }
+ 
+#[account]
+pub struct StateAccount{
+    pub authority:Pubkey, // who is the person who posted them
+    pub post_count:u64, //  unsigned 64 bit integer
+
+}
+
+#[derive(Accounts)] {
+    pub state : Account<'info,StateAccount>, // letting the Account know that it is a state account
+    
+}
+
+
+
 
 // Post account Structure 
 //  Simple struct so defined  directly 
