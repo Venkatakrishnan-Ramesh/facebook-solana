@@ -28,8 +28,8 @@ pub fn create_post(
     poster_name: String,
     poster_url: String,
 ) -> Result<()> {
-    let post = &mut ctx.accounts.post;
-    let state = &mut ctx.accounts.state;
+    let post = &mut ctx.accounts.post; // a mutatable account to allow one or more users to post
+    let state = &mut ctx.accounts.state;       // a mutatable account to allow one or more users to post
     post.authority = *ctx.accounts.authority.key();
     post.text = text;
     post.poster_name = poster_name;
