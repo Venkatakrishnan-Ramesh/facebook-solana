@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@solana/wallet-adapter-react": "^0.15.26",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0"

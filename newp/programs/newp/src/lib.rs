@@ -1,4 +1,4 @@
-// Include libraries for program
+/// Include libraries for program
 use anchor_lang::prelude::*;
 use anchor_spl::token::{self, Token};
 use std::mem::size_of;
@@ -15,7 +15,8 @@ const USER_URL_LENGTH: usize = 255;
 
 /// Facebook Clone program
 #[program]
-pub mod facebook_clone {
+
+pub mod newp {
     use super::*;
 
     /// Create state to save the post counts
@@ -23,7 +24,7 @@ pub mod facebook_clone {
     /// This account should be initialized before post
     pub fn create_state(
         ctx: Context<CreateState>,
-    ) -> ProgramResult {
+    ) -> ProgramResult{
         // Get state from context
         let state = &mut ctx.accounts.state;
         // Save authority to state
