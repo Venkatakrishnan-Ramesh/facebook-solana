@@ -134,7 +134,7 @@ for teams looking to manage
 ## Contributors
 > Team 1
 - Venkatakrishnan - CH.EN.U4AIE20078
-- Suprita - CH.EN.U4AIE20066
+- Supritha - CH.EN.U4AIE20066
 - Sreeharshita - CH.EN.U4AIE20080
 - Harrieni Shankar -CH.EN.U4AIE20022
 - Arjun kumar - CH.EN.U4AIE20002
