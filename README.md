@@ -131,7 +131,7 @@ potentially be used in conjunction with a Solana-based application to manage con
 application. Its flexible data model and powerful content management tools make it a useful tool
 for teams looking to manage 
 
-## Conhtributors
+## Contributors
 - Venkatakrishnan - CH.EN.U4AIE20078
 - SUprita - CH.EN.U4AIE20066
 - Sreeharshita - CH.EN.U4AIE20080
