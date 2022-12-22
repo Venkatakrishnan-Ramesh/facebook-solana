@@ -130,3 +130,10 @@ Overall, while Sanity.io is not specifically designed for managing a Solana netw
 potentially be used in conjunction with a Solana-based application to manage content for the
 application. Its flexible data model and powerful content management tools make it a useful tool
 for teams looking to manage 
+
+## Conhtributors
+- Venkatakrishnan - CH.EN.U4AIE20078
+- SUprita - CH.EN.U4AIE20066
+- Sreeharshita - CH.EN.U4AIE20080
+- Harrieni Shankar -CH.EN.U4AIE20022
+- Arjun kumar - CH.EN.U4AIE20002
