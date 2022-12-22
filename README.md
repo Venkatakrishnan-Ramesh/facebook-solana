@@ -29,15 +29,15 @@ project aims to create a sense of community and connection among users, potentia
 enhancing their overall experience.
 
 ## Proposed System:
-**Next.js**: Next.js is a popular JavaScript framework for building server-rendered or statically-
+- **Next.js**: Next.js is a popular JavaScript framework for building server-rendered or statically-
 exported React applications. It is built on top of React and web pack, and enables developers to
 build scalable and performant web applications with minimal configuration.
 Here are some basic Next.js commands used in our project:
-1. npx create-next-app - This command creates a new Next.js app in a new directory.
-2. npm run dev - This command starts the development server for the Next.js app.
-3. npm run build - This command builds the Next.js app for production.
-4. npm run start - This command starts the production server for the Next.js app.
-5. next/css - This module allows you to import and use CSS files in your Next.js app.
+> 1. npx create-next-app - This command creates a new Next.js app in a new directory.
+> 2. npm run dev - This command starts the development server for the Next.js app.
+> 3. npm run build - This command builds the Next.js app for production.
+> 4. npm run start - This command starts the production server for the Next.js app.
+> 5. next/css - This module allows you to import and use CSS files in your Next.js app.
 Overall, Next.js is a powerful and easy-to-use framework that simplifies the development of
 server-rendered and statically-exported React apps. It provides a wide range of features and tools
 that make it easy to build fast and scalable web applications.
