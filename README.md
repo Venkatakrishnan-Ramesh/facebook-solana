@@ -132,8 +132,9 @@ application. Its flexible data model and powerful content management tools make 
 for teams looking to manage 
 
 ## Contributors
+> Team 1
 - Venkatakrishnan - CH.EN.U4AIE20078
-- SUprita - CH.EN.U4AIE20066
+- Suprita - CH.EN.U4AIE20066
 - Sreeharshita - CH.EN.U4AIE20080
 - Harrieni Shankar -CH.EN.U4AIE20022
 - Arjun kumar - CH.EN.U4AIE20002
